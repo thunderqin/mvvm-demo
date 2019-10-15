@@ -322,7 +322,7 @@ Dep.prototype = {
 ```
 实例化`Watcher`的时候，调用`get()`方法，通过`Dep.target = watcherInstance`标记订阅者是当前watcher实例，强行触发属性定义的`getter`方法，`getter`方法执行的时候，就会在属性的订阅器`dep`添加当前watcher实例，从而在属性值有变化的时候，watcherInstance就能收到更新通知。
 
-ok, Watcher也已经实现了，[完整代码](https://github.com/DMQ/mvvm/blob/master/js/watcher.js)。
+ok, Watcher也已经实现了，[完整代码](https://github.com/thunderqin/mvvm-demo)。
 基本上vue中数据绑定相关比较核心的几个模块也是这几个，猛戳[这里](https://github.com/vuejs/vue) , 在`src` 目录可找到vue源码。
 
 最后来讲讲MVVM入口文件的相关逻辑和实现吧，相对就比较简单了~
